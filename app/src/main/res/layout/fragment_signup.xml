@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:background="@drawable/noup"
+            app:layout_constraintBottom_toBottomOf="@+id/signupb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/name"
+            app:layout_constraintBottom_toBottomOf="@+id/usernamesignup"
+            app:layout_constraintEnd_toEndOf="@+id/usernamesignup"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="@+id/usernamesignup"
+            app:layout_constraintTop_toTopOf="@+id/usernamesignup" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/email"
+            app:layout_constraintBottom_toBottomOf="@+id/email"
+            app:layout_constraintEnd_toEndOf="@+id/email"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="@+id/email"
+            app:layout_constraintTop_toTopOf="@+id/email" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/password"
+            app:layout_constraintBottom_toBottomOf="@+id/passwordsignup"
+            app:layout_constraintEnd_toEndOf="@+id/passwordsignup"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="@+id/passwordsignup"
+            app:layout_constraintTop_toTopOf="@+id/passwordsignup" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TC"
+            android:textAlignment="center"
+            android:textColor="#80000000"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/signupb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordsignup" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernamesignup"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+            android:hint="Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernamesignupnew"
+                android:layout_width="230dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:inputType="textPersonName"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+            android:hint="Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernamesignup"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailnew"
+                android:layout_width="230dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:inputType="textEmailAddress"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordsignup"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+            android:hint="Password"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintVertical_bias="0.050000012">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordsignupnew"
+                android:layout_width="230dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:inputType="textPassword"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signupb"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/proceed_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordsignup"
+            app:layout_constraintVertical_bias="0.78">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:background="@drawable/noup"
+            app:layout_constraintBottom_toBottomOf="@+id/loginb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/email"
+            app:layout_constraintBottom_toBottomOf="@+id/usernamenew"
+            app:layout_constraintEnd_toEndOf="@+id/usernamenew"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="@+id/usernamenew"
+            app:layout_constraintTop_toTopOf="@+id/usernamenew" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/password"
+            app:layout_constraintBottom_toBottomOf="@+id/passwordnew"
+            app:layout_constraintEnd_toEndOf="@+id/passwordnew"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="@+id/passwordnew"
+            app:layout_constraintTop_toTopOf="@+id/passwordnew" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernamenew"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+            android:hint="Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Email"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordnew"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+
+            android:hint="Password"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernamenew"
+            app:layout_constraintVertical_bias="0.060000002">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgotpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="Forgot Password?"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordnew"
+            app:layout_constraintVertical_bias="0.20999998" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginb"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/proceed_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotpassword"
+            app:layout_constraintVertical_bias="0.75">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

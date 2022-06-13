@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings_frag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/toplogo"
+            android:src="@drawable/splashlogo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toplogo"
+            android:text="©Your Company Name"
+            android:id="@+id/copyright"
+            android:fontFamily="@font/poppins_light"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/copyright"
+            android:id="@+id/squirrelkey"
+            android:layout_centerHorizontal="true"
+            android:text="Made with Squirrel Key"
+            android:fontFamily="@font/poppins_light"/>
+
+        <TextView
+            android:id="@+id/pp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/squirrelkey"
+            android:fontFamily="@font/poppins_light"
+            android:layout_centerHorizontal="true"
+            android:text="Privacy Policy"
+            android:textColor="@color/teal_200" />
+
+        <TextView
+            android:id="@+id/tc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_light"
+            android:text="Terms &amp; Confitions"
+            android:textColor="@color/teal_200" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/logoutr"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tc">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logout"
+            android:text="Logout"
+            android:textColor="#BABABA"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/logout"
+            android:src="@drawable/logout"
+            android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

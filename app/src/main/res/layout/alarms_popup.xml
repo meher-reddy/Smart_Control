@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Time"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginStart="42dp"
+        android:fontFamily="@font/poppins_light"
+        android:id="@+id/open"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:textSize="70sp"
+        android:id="@+id/opentime"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/opentime"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/opentoggle"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close Time"
+        android:layout_below="@+id/opentime"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginStart="42dp"
+        android:fontFamily="@font/poppins_light"
+        android:id="@+id/close"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:layout_below="@+id/opentime"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:textSize="70sp"
+        android:id="@+id/closetime"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/opentime"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/opentime"
+        android:id="@+id/closetoggle"/>
+
+
+
+</RelativeLayout>

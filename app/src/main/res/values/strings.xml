@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart Control</string>
+    <string name="TC">By pressing submit you agree to\n<font color='#A926EC'>  our terms and conditions</font></string>
+</resources>

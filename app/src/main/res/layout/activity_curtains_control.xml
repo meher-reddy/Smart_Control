@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CurtainsControl">
+
+    <FrameLayout
+        android:id="@+id/topbarframee"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:textAlignment="center"
+            android:theme="@style/Theme.AppCompat.Light">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dyis_inverted"
+                android:textAlignment="center"
+                android:textColor="#A020F1"
+                android:textSize="30sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bluestat"
+                android:backgroundTint="@color/white"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/bluetooth_disabled"
+                android:onClick="bluetoothstatuscontrol" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back"
+                android:backgroundTint="@color/white"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="17dp"
+                android:background="@drawable/back"
+                android:onClick="deviceback" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarframee"
+        android:background="@drawable/nodown">
+
+        <RelativeLayout
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nodown">
+
+
+            <TextView
+                android:id="@+id/devicenamecontrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:onClick="edit"
+                android:text="Device Name"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ConnectionStatus : Disconnected"
+                android:textStyle="bold"
+                android:layout_below="@+id/devicenamecontrol"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_light"
+                android:visibility="invisible"
+                android:id="@+id/statustext"
+                android:textColor="#F44336"
+                android:textSize="11sp"/>
+
+            <ImageButton
+                android:id="@+id/deleteitem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:src="@drawable/ic_delete_white_24dp"
+                android:background="@color/white"/>
+
+
+
+            <EditText
+                android:id="@+id/editdevicenamecontrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                android:fontFamily="@font/poppins_light"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/devicenamecontrol"
+                android:layout_marginTop="37dp"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:visibility="invisible"
+                android:src="@drawable/tick"
+                android:id="@+id/editname"
+                android:onClick="editname" />
+
+            <TextView
+                android:id="@+id/curtaindef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/editdevicenamecontrol"
+                android:fontFamily="@font/poppins_light"
+                android:text="Curtains"
+                android:textAlignment="center"
+                android:textColor="#BABABA"
+                android:textSize="20sp" />
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifview"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/curtaindef"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/o_1"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="139dp" />
+
+            <SeekBar
+                android:id="@+id/curtainsprogress"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/gifview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#000000"
+                android:foregroundGravity="center"
+                android:indeterminate="false"
+                android:max="3"
+                android:progress="3"
+                android:progressBackgroundTint="#000000"
+                android:progressTint="@color/black"
+                android:secondaryProgressTint="#000000"
+                android:thumbTint="@color/teal_200" />
+
+           <ImageButton
+               android:id="@+id/fullopen"
+               android:onClick="fullopen"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_below="@+id/curtainsprogress"
+               android:src="@drawable/curtains_open_lite"
+               android:layout_marginStart="70dp"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/circle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullopentitile"
+                android:layout_below="@+id/fullopen"
+                android:layout_marginTop="5dp"
+                android:text="Open"
+                android:fontFamily="@font/poppins_light"
+                android:layout_marginStart="85dp"/>
+
+            <ImageButton
+                android:id="@+id/fullclose"
+                android:onClick="fullclose"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/curtainsprogress"
+                android:src="@drawable/curtains_lite"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle"/>
+            <ImageButton
+                android:id="@+id/alarms"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/curtainsprogress"
+                android:src="@drawable/alarm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarmstitle"
+                android:layout_below="@+id/fullopen"
+                android:layout_marginTop="5dp"
+                android:text="Auto"
+                android:fontFamily="@font/poppins_light"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullclosetitile"
+                android:layout_below="@+id/fullclose"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="Close"
+                android:fontFamily="@font/poppins_light"
+                android:layout_marginEnd="85dp"/>
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/retrybutton"
+                android:layout_marginTop="24.5dp"
+                android:src="@drawable/retry"
+                android:visibility="invisible"
+                android:layout_marginStart="40dp"/>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
